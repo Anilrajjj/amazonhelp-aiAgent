@@ -1,0 +1,18 @@
+# never commit keys
+.env
+
+# the 516MB raw Kaggle dump -- see README for the download link
+twcs.csv
+
+# generated artifacts
+data/amazonhelp_threads.jsonl
+data/.llm_cache/
+results/
+__pycache__/
+*.pyc
+
+# BUT the golden set is a frozen, hand-labelled deliverable and must be
+# committed -- it is the 220 messages the labels in src/_golden_labels.py
+# refer to, and regenerating it would draw a different sample.
+!data/golden.jsonl
+!data/golden_unlabelled.jsonl
